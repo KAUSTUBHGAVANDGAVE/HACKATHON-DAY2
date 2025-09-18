@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Vegetarian Menu Selection</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    h2 {
+      color: #2e7d32;
+    }
+
+    .sunset-glow {
+  background: radial-gradient(circle at center, #ffeb3b 0%, #ff9800 50%, #e91e63 100%);
+    }
+    .meal-section {
+      border: 1px solid #ccc;
+      padding: 15px;
+      margin-bottom: 20px;
+      border-radius: 5px;
+    }
+    .options-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 10px;
+      margin-top: 10px;
+    }
+    .error {
+      color: red;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+    .submit-btn {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #388e3c;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+    .submit-btn:disabled {
+      background-color: #aaa;
+      cursor: not-allowed;
+    }
+  </style>
+</head>
+<body>
+    <div class="sunset-glow">
+  <h1>Vegetarian Menu Selection</h1>
+
+  <form id="menuForm">
+    <!-- Meal Sections -->
+    <div class="meal-section" data-meal="Breakfast">
+      <h2>Breakfast</h2>
+      <div class="options-grid">
+        <!-- 14+ Vegetarian Options -->
+        <label><input type="checkbox" name="breakfast" value="Oatmeal"> Oatmeal</label><br>
+        <label><input type="checkbox" name="breakfast" value="Pancakes"> Pancakes</label><br>
+        <label><input type="checkbox" name="breakfast" value="Fruit Salad"> Fruit Salad</label><br>
+        <label><input type="checkbox" name="breakfast" value="Smoothie Bowl"> Smoothie Bowl</label><br>
+        <label><input type="checkbox" name="breakfast" value="Avocado Toast"> Avocado Toast</label><br>
+        <label><input type="checkbox" name="breakfast" value="Granola"> Granola</label><br>
+        <label><input type="checkbox" name="breakfast" value="Yogurt Parfait"> Yogurt Parfait</label><br>
+        <label><input type="checkbox" name="breakfast" value="Vegetable Upma"> Vegetable Upma</label><br>
+        <label><input type="checkbox" name="breakfast" value="Idli"> Idli</label><br>
+        <label><input type="checkbox" name="breakfast" value="Poha"> Poha</label><br>
+        <label><input type="checkbox" name="breakfast" value="Banana Muffin"> Banana Muffin</label><br>
+        <label><input type="checkbox" name="breakfast" value="Cornflakes"> Cornflakes</label><br>
+        <label><input type="checkbox" name="breakfast" value="Bagel with Cream Cheese"> Bagel with Cream Cheese</label><br>
+        <label><input type="checkbox" name="breakfast" value="Tofu Scramble"> Tofu Scramble</label><br>
+      </div>
+      <div class="error" id="breakfast-error"></div>
+    </div>
+
+    <div class="meal-section" data-meal="Lunch">
+      <h2>Lunch</h2>
+      <div class="options-grid">
+        <label><input type="checkbox" name="lunch" value="Veggie Burger"> Veggie Burger</label><br>
+        <label><input type="checkbox" name="lunch" value="Grilled Cheese"> Grilled Cheese</label><br>
+        <label><input type="checkbox" name="lunch" value="Lentil Soup"> Lentil Soup</label><br>
+        <label><input type="checkbox" name="lunch" value="Mixed Veg Curry"> Mixed Veg Curry</label><br>
+        <label><input type="checkbox" name="lunch" value="Veg Biryani"> Veg Biryani</label><br>
+        <label><input type="checkbox" name="lunch" value="Chickpea Salad"> Chickpea Salad</label><br>
+        <label><input type="checkbox" name="lunch" value="Hummus Wrap"> Hummus Wrap</label><br>
+        <label><input type="checkbox" name="lunch" value="Veg Sandwich"> Veg Sandwich</label><br>
+        <label><input type="checkbox" name="lunch" value="Pasta Primavera"> Pasta Primavera</label><br>
+        <label><input type="checkbox" name="lunch" value="Paneer Tikka"> Paneer Tikka</label><br>
+        <label><input type="checkbox" name="lunch" value="Vegetable Fried Rice"> Vegetable Fried Rice</label><br>
+        <label><input type="checkbox" name="lunch" value="Rajma Chawal"> Rajma Chawal</label><br>
+        <label><input type="checkbox" name="lunch" value="Tofu Stir Fry"> Tofu Stir Fry</label><br>
+        <label><input type="checkbox" name="lunch" value="Zucchini Lasagna"> Zucchini Lasagna</label><br>
+      </div>
+      <div class="error" id="lunch-error"></div>
+    </div>
+
+    <div class="meal-section" data-meal="Snacks">
+      <h2>Snacks</h2>
+      <div class="options-grid">
+        <label><input type="checkbox" name="snacks" value="Fruit Cup"> Fruit Cup</label><br>
+        <label><input type="checkbox" name="snacks" value="Granola Bar"> Granola Bar</label><br>
+        <label><input type="checkbox" name="snacks" value="Trail Mix"> Trail Mix</label><br>
+        <label><input type="checkbox" name="snacks" value="Baked Chips"> Baked Chips</label><br>
+        <label><input type="checkbox" name="snacks" value="Veggie Sticks"> Veggie Sticks</label><br>
+        <label><input type="checkbox" name="snacks" value="Energy Balls"> Energy Balls</label><br>
+        <label><input type="checkbox" name="snacks" value="Peanut Butter Sandwich"> Peanut Butter Sandwich</label><br>
+        <label><input type="checkbox" name="snacks" value="Popcorn"> Popcorn</label><br>
+        <label><input type="checkbox" name="snacks" value="Roasted Chickpeas"> Roasted Chickpeas</label><br>
+        <label><input type="checkbox" name="snacks" value="Cheese Cubes"> Cheese Cubes</label><br>
+        <label><input type="checkbox" name="snacks" value="Boiled Corn"> Boiled Corn</label><br>
+        <label><input type="checkbox" name="snacks" value="maggie">Maggi</label><br>
+        </div>
+        <div class="error" id="lunch-error"></div>
+        </div>
+
+        </form>
+        </form>
+    </div>
+                <a style="color: #007bff; /* Blue text */
+                text-decoration: none; /* Remove underline */
+            font-family: Arial, sans-serif;  " href="summary.html">NEXT PAGE</a>
+    </body>
+    </html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Vegetarian Menu Selection</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    h2 {
+      color: #2e7d32;
+    }
+
+    .sunset-glow {
+  background: radial-gradient(circle at center, #ffeb3b 0%, #ff9800 50%, #e91e63 100%);
+    }
+    .meal-section {
+      border: 1px solid #ccc;
+      padding: 15px;
+      margin-bottom: 20px;
+      border-radius: 5px;
+    }
+    .options-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 10px;
+      margin-top: 10px;
+    }
+    .error {
+      color: red;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+    .submit-btn {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #388e3c;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+    .submit-btn:disabled {
+      background-color: #aaa;
+      cursor: not-allowed;
+    }
+  </style>
+</head>
+<body>
+    <div class="sunset-glow">
+  <h1>NON Vegetarian Menu Selection</h1>
+
+  <form id="menuForm">
+    
+    <div class="meal-section" data-meal="Breakfast">
+      <h2>Breakfast</h2>
+      <div class="options-grid">
+        
+        <label><input type="checkbox" name="breakfast" value="Oatmeal"> Shakshouka</label><br>
+        <label><input type="checkbox" name="breakfast" value="Pancakes"> Macroni Pola</label><br>
+        <label><input type="checkbox" name="breakfast" value="Fruit Salad"> Mushroom omlet</label><br>
+        <label><input type="checkbox" name="breakfast" value="Smoothie Bowl"> Mushroom Cheese Omleete</label><br>
+        <label><input type="checkbox" name="breakfast" value="Avocado Toast"> chicken Toast</label><br>
+        <label><input type="checkbox" name="breakfast" value="Granola"> Granola</label><br>
+        <label><input type="checkbox" name="breakfast" value="Yogurt Parfait"> Yogurt Parfait</label><br>
+        <label><input type="checkbox" name="breakfast" value="Vegetable Upma"> Vegetable Chicken soup</label><br>
+        <label><input type="checkbox" name="breakfast" value="Idli"> Idli</label><br>
+        <label><input type="checkbox" name="breakfast" value="Poha"> Eggs</label><br>
+        <label><input type="checkbox" name="breakfast" value="Banana Muffin"> EGG Muffin</label><br>
+        <label><input type="checkbox" name="breakfast" value="Cornflakes"> Cornflakes</label><br>
+        <label><input type="checkbox" name="breakfast" value="Bagel with Cream Cheese"> PRAWN PUTTU</label><br>
+        <label><input type="checkbox" name="breakfast" value="Tofu Scramble"> Tofu Scramble</label><br>
+      </div>
+      <div class="error" id="breakfast-error"></div>
+    </div>
+
+    <div class="meal-section" data-meal="Lunch">
+      <h2>Lunch</h2>
+      <div class="options-grid">
+        <label><input type="checkbox" name="lunch" value="Veggie Burger"> Chicken Burger</label><br>
+        <label><input type="checkbox" name="lunch" value="Grilled Cheese"> Grilled Chicken Cheese</label><br>
+        <label><input type="checkbox" name="lunch" value="Lentil Soup"> Chicken Soup</label><br>
+        <label><input type="checkbox" name="lunch" value="Mixed Veg Curry"> Mixed Chicken Curry</label><br>
+        <label><input type="checkbox" name="lunch" value="Veg Biryani"> Chicken Biryani</label><br>
+        <label><input type="checkbox" name="lunch" value="Chickpea Salad"> Chickpea Chicken Salad</label><br>
+        <label><input type="checkbox" name="lunch" value="Hummus Wrap"> Hummus Wrap</label><br>
+        <label><input type="checkbox" name="lunch" value="Veg Sandwich"> NON VEG Sandwich</label><br>
+        <label><input type="checkbox" name="lunch" value="Pasta Primavera">  Chicken Pasta Primavera</label><br>
+        <label><input type="checkbox" name="lunch" value="Paneer Tikka"> Chicken Tikka</label><br>
+        <label><input type="checkbox" name="lunch" value="Vegetable Fried Rice"> Chicken Fried Rice</label><br>
+        <label><input type="checkbox" name="lunch" value="Rajma Chawal"> Chicken Chawal</label><br>
+        <label><input type="checkbox" name="lunch" value="Tofu Stir Fry"> Chicken Stir Fry</label><br>
+        <label><input type="checkbox" name="lunch" value="Zucchini Lasagna"> Zucchini Lasagna</label><br>
+      </div>
+      <div class="error" id="lunch-error"></div>
+    </div>
+
+    <div class="meal-section" data-meal="Snacks">
+      <h2>Snacks</h2>
+      <div class="options-grid">
+        <label><input type="checkbox" name="snacks" value="Fruit Cup"> Chicken Curry</label><br>
+        <label><input type="checkbox" name="snacks" value="Granola Bar"> Granola Bar</label><br>
+        <label><input type="checkbox" name="snacks" value="Trail Mix"> Non veg Mix</label><br>
+        <label><input type="checkbox" name="snacks" value="Baked Chips"> Baked Chips</label><br>
+        <label><input type="checkbox" name="snacks" value="Veggie Sticks"> Chicken Sticks</label><br>
+        <label><input type="checkbox" name="snacks" value="Energy Balls"> Energy Balls</label><br>
+        <label><input type="checkbox" name="snacks" value="Peanut Butter Sandwich"> Peanut Butter Sandwich</label><br>
+        <label><input type="checkbox" name="snacks" value="Popcorn"> Chicken Popcorn</label><br>
+        <label><input type="checkbox" name="snacks" value="Roasted Chickpeas"> Roasted Chickpeas</label><br>
+        <label><input type="checkbox" name="snacks" value="Cheese Cubes"> Cheese Chicken Cubes</label><br>
+        <label><input type="checkbox" name="snacks" value="Boiled Corn"> Boiled Chicken</label><br>
+        <label><input type="checkbox" name="snacks" value="maggie">Chicken Soup</label><br>
+        </div>
+        <div class="error" id="lunch-error"></div>
+        </div>
+        </form>
+        </form>
+    </div>
+                <a style="color: #007bff; /* Blue text */
+                text-decoration: none; /* Remove underline */
+            font-family: Arial, sans-serif;  " href="summary.html">NEXT PAGE</a>
+    </body>
+    </html>

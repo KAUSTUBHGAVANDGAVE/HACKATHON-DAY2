@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mess Menu and Weekly Rating</title>
+    <style> 
+        .newgen {
+            background: radial-gradient(circle,#a18cd1,#fbc2eb);
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        th, td {
+            border: 1px solid #aaa;
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        .rating-select {
+            width: 100%;
+            padding: 5px;
+        }
+
+        .date-container {
+            margin-bottom: 20px;
+        }
+
+        input[type="date"] {
+            padding: 8px;
+            font-size: 14px;
+        }
+
+        .submit-btn {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: green;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .submit-btn:hover {
+            background-color: darkgreen;
+        }
+    </style>
+</head>
+<div>
+
+    <h2>Weekly Mess Menu</h2>
+<div class="newgen">
+    <div class="date-container">
+        <label for="week-date">Select Week Starting Date: </label>
+        <input type="date" id="week-date" name="week-date">
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Day</th>
+                <th>Breakfast</th>
+                <th>Lunch</th>
+                <th>Dinner</th>
+                <th>Rate This Day</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Example: You can customize the menu items -->
+            <tr>
+                <td>Monday</td>
+                <td>Idli & Sambar</td>
+                <td>Rice, Dal, Veg Curry</td>
+                <td>Chapati, Paneer</td>
+                <td>
+                    <select class="rating-select" name="rating-monday">
+                        <option value="">Rate</option>
+                        <option value="1">★☆☆☆☆</option>
+                        <option value="2">★★☆☆☆</option>
+                        <option value="3">★★★☆☆</option>
+                        <option value="4">★★★★☆</option>
+                        <option value="5">★★★★★</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Tuesday</td>
+                <td>Poha</td>
+                <td>Rajma, Rice</td>
+                <td>Paratha, Curd</td>
+                <td>
+                    <select class="rating-select" name="rating-tuesday">
+                        <option value="">Rate</option>
+                        <option value="1">★☆☆☆☆</option>
+                        <option value="2">★★☆☆☆</option>
+                        <option value="3">★★★☆☆</option>
+                        <option value="4">★★★★☆</option>
+                        <option value="5">★★★★★</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Wednesday</td>
+                <td>Upma</td>
+                <td>Chole, Rice</td>
+                <td>Dosa, Chutney</td>
+                <td>
+                    <select class="rating-select" name="rating-wednesday">
+                        <option value="">Rate</option>
+                        <option value="1">★☆☆☆☆</option>
+                        <option value="2">★★☆☆☆</option>
+                        <option value="3">★★★☆☆</option>
+                        <option value="4">★★★★☆</option>
+                        <option value="5">★★★★★</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Thursday</td>
+                <td>Aloo Paratha</td>
+                <td>Sambar Rice</td>
+                <td>Roti, Veg Korma</td>
+                <td>
+                    <select class="rating-select" name="rating-thursday">
+                        <option value="">Rate</option>
+                        <option value="1">★☆☆☆☆</option>
+                        <option value="2">★★☆☆☆</option>
+                        <option value="3">★★★☆☆</option>
+                        <option value="4">★★★★☆</option>
+                        <option value="5">★★★★★</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Friday</td>
+                <td>Chole Bhature</td>
+                <td>Veg Biryani</td>
+                <td>Dal Tadka, Roti</td>
+                <td>
+                    <select class="rating-select" name="rating-friday">
+                        <option value="">Rate</option>
+                        <option value="1">★☆☆☆☆</option>
+                        <option value="2">★★☆☆☆</option>
+                        <option value="3">★★★☆☆</option>
+                        <option value="4">★★★★☆</option>
+                        <option value="5">★★★★★</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Saturday</td>
+                <td>Puri, Aloo</td>
+                <td>Lemon Rice</td>
+                <td>Maggi & Eggs</td>
+                <td>
+                    <select class="rating-select" name="rating-saturday">
+                        <option value="">Rate</option>
+                        <option value="1">★☆☆☆☆</option>
+                        <option value="2">★★☆☆☆</option>
+                        <option value="3">★★★☆☆</option>
+                        <option value="4">★★★★☆</option>
+                        <option value="5">★★★★★</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Sunday</td>
+                <td>Masala Dosa</td>
+                <td>Paneer Pulao</td>
+                <td>Chicken Curry / Veg Alternative</td>
+                <td>
+                    <select class="rating-select" name="rating-sunday">
+                        <option value="">Rate</option>
+                        <option value="1">★☆☆☆☆</option>
+                        <option value="2">★★☆☆☆</option>
+                        <option value="3">★★★☆☆</option>
+                        <option value="4">★★★★☆</option>
+                        <option value="5">★★★★★</option>
+                    </select>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+  </div>
+
+    <a style="color: #007bff; /* Blue text */
+                text-decoration: none; /* Remove underline */
+            font-family: Arial, sans-serif;  " href="veg.html">VEG MENU SELECTION</a>
+            <br>
+     <a style="color: #007bff; /* Blue text */
+                text-decoration: none; /* Remove underline */
+            font-family: Arial, sans-serif;  " href="nonveg.html">NON VEG MENU SELECTION</a>
+    
+
+    <script>
+        function submitRatings() {
+            const date = document.getElementById("week-date").value;
+            if (!date) {
+                alert("Please select a date.");
+                return;
+            }
+
+            const ratings = {};
+            const days = ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"];
+            for (let day of days) {
+                const rating = document.querySelector([name="rating-${day}"]).value;
+                ratings[day] = rating || "Not Rated";
+            }
+
+            console.log("Selected Week Starting Date:", date);
+            console.log("Ratings:", ratings);
+
+            alert("Thanks! Your ratings have been submitted. Check console for data.");
+        }
+    </script>
+
+</body>
+</html>
